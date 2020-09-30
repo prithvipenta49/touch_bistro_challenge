@@ -11,10 +11,11 @@
     state: stopped
 
 - name: move nginx conf
-  shell: sudo mv /etc/nginx/sites-available/default /home/ubuntu/
+  shell: sudo mv /etc/nginx/sites-enabled/default /home/ubuntu/
+  ignore_errors: yes
 
 - name: copy nginx config 
-  shell: sudo cp /home/ubuntu/touch_bistro_challenge/ansible/default /etc/nginx/sites-available
+  shell: sudo cp /home/ubuntu/touch_bistro_challenge/ansible/default /etc/nginx/sites-enabled
 
 - name: Start service httpd, if not running
   service:
