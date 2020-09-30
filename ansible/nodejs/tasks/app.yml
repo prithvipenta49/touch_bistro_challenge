@@ -1,0 +1,21 @@
+---
+- name: build docker image
+  shell: sudo docker build -t node /home/ubuntu/service/.
+  register: build
+
+- debug:
+    msg: "{{ build.stdout_lines }}"
+
+- name: run docker container
+  shell: sudo docker run -d --name node-app -p 8080:8080 node 
+  register: run
+
+- debug:
+    msg: "{{ run.stdout_lines }}"
+
+- name: check container is up
+  shell: sudo docker ps -a
+  register: container
+
+- debug:
+    msg: "{{ container.stdout_lines }}"

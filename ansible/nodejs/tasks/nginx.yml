@@ -1,0 +1,9 @@
+---
+- name: install nginx
+  shell: sudo apt update
+
+- name: install nginx
+  shell: sudo apt install nginx
+
+- name: install nginx
+  shell: 

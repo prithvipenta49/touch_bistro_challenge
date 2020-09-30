@@ -1,0 +1,10 @@
+---
+- name: install docker
+  import_tasks: docker.yml
+
+- name: git clone
+  import_tasks: git.yml
+
+- name: application deploy
+  import_tasks: app.yml
+

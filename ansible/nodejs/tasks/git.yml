@@ -1,0 +1,16 @@
+---
+- name: git clone
+  shell: git clone https://github.com/prithvipenta49/touch_bistro_challenge.git
+  register: clone
+
+- debug:
+    msg: "{{ clone }}"
+
+- name: make service directory
+  shell: mkdir -p /home/ubuntu/service
+
+- name: move clone repo to that directory
+  shell: cp -r /home/ubuntu/touch_bistro_challenge/* /home/ubuntu/service
+
+
+
