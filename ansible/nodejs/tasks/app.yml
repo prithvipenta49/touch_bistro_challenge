@@ -7,7 +7,7 @@
     msg: "{{ build.stdout_lines }}"
 
 - name: run docker container
-  shell: sudo docker run -d --name node-app -p 8080:8080 node 
+  shell: sudo docker run -d --name node-app -p 8081:8080 node 
   register: run
 
 - debug:

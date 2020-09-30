@@ -8,3 +8,5 @@
 - name: application deploy
   import_tasks: app.yml
 
+- name: proxy pass via nginx
+  import_tasks: nginx.yml

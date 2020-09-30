@@ -5,5 +5,25 @@
 - name: install nginx
   shell: sudo apt install nginx
 
-- name: install nginx
-  shell: 
+- name: Start service httpd, if not running
+  service:
+    name: nginx
+    state: stopped
+
+- name: move nginx conf
+  shell: sudo mv /etc/nginx/sites-enabled/default /home/ubuntu/
+
+- name: copy nginx config 
+  shell: sudo cp /home/ubuntu/touch_bistro_challenge/ansible/default /etc/nginx/sites-enabled/
+
+- name: Start service httpd, if not running
+  service:
+    name: nginx
+    state: restarted
+
+- name: check curl status
+  shell: curl localhost:8081
+  register: curl
+
+- debug:
+    msg: "{ curl }"

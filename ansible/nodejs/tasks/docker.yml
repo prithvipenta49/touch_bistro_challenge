@@ -24,7 +24,7 @@
 - name: install docker
   shell: sudo apt install docker-ce -y
 
-- name: Start service httpd, if not running
+- name: Start service docker, if not running
   service:
     name: docker
     state: started
