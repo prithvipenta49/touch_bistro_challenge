@@ -11,10 +11,10 @@
     state: stopped
 
 - name: move nginx conf
-  shell: sudo mv /etc/nginx/sites-enabled/default /home/ubuntu/
+  shell: sudo mv /etc/nginx/sites-available/default /home/ubuntu/
 
 - name: copy nginx config 
-  shell: sudo cp /home/ubuntu/touch_bistro_challenge/ansible/default /etc/nginx/sites-enabled/
+  shell: sudo cp /home/ubuntu/touch_bistro_challenge/ansible/default /etc/nginx/sites-available
 
 - name: Start service httpd, if not running
   service:
@@ -26,4 +26,4 @@
   register: curl
 
 - debug:
-    msg: "{ curl }"
+    msg: "{{ curl.stdout }}"
