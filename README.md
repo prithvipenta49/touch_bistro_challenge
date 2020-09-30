@@ -20,8 +20,8 @@ consists of ansible playbook start where I have stated ubuntu user will run the 
 inside nodejs role have multiple folder structure created as we initialise role
 README.md  defaults  files  handlers  meta  tasks  templates  tests  vars
 
-inside task main.yml file I have called different yml 
-first is docker.yml. In this yml docker installation steps are given
-second is git.yml. in this yml git clone to local is happening
-third is app.yml. in this yml how image is built by dockerfile and container is launch steps are given
-fourth is nginx.yml. this yml consists of installation and configuring proxy.
+- inside task main.yml file I have called different yml 
+* first is docker.yml. In this yml docker installation steps are given
+* second is git.yml. in this yml git clone to local is happening
+* third is app.yml. in this yml how image is built by dockerfile and container is launch steps are given
+* fourth is nginx.yml. this yml consists of installation and configuring proxy.
