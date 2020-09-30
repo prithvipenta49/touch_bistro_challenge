@@ -1,6 +1,8 @@
 # touch_bistro_challenge
 touch_bistro_challenge SRE challenge
 
+You can find terraform state uploaded in s3
+
 Once the infra is ready, I have used Ansible as configuration management
 
 Here is the deployment strategy
